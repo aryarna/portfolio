@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aryanraj Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 9%;
+      background-color: #161616;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 3rem;
+      color: #b74b4b;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 3rem;
+    }
+
+    nav a {
+      font-size: 1.8rem;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #b74b4b;
+      border-bottom: 2px solid #b74b4b;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 3rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 7rem 9% 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 600px;
+      background: #161616;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px solid #b74b4b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: left;
+    }
+
+    .contact-form h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .contact-form label {
+      font-size: 1.6rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 1.2rem;
+      background: #1e1e1e;
+      border: 1px solid #b74b4b;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      outline: none;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+      border: 1px solid #b74b4b;
+    }
+
+    .contact-form button {
+      padding: 1rem 3rem;
+      background: #b74b4b;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #d85b5b;
+    }
+
+    .contact-info {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .contact-info p {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    .contact-info a {
+      font-size: 1.8rem;
+      color: #b74b4b;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #d85b5b;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        padding: 1.5rem;
+      }
+
+      .contact-form h2 {
+        font-size: 2rem;
+      }
+
+      .contact-form label {
+        font-size: 1.4rem;
+      }
+
+      .contact-form input, .contact-form textarea {
+        font-size: 1.4rem;
+      }
+
+      .contact-form button {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 1rem 5%;
+      }
+
+      nav {
+        display: block;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .contact-form h2 {
+        font-size: 1.8rem;
+      }
+
+      .contact-form label {
+        font-size: 1.3rem;
+      }
+
+      .contact-form input, .contact-form textarea {
+        font-size: 1.3rem;
+      }
+
+      .contact-form button {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">ARYANRAJ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <section>
+    <h1>Contact Me</h1>
+
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <form action="#" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <p>If you have any questions or need assistance, feel free to contact me!</p>
+      <p>You can also reach me through:</p>
+      <p><a href="mailto:aryanraj@gmail.com">aryanraj@gmail.com</a></p>
+      <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

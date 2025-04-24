@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryanraj Education</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: #161616;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #b74b4b;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 2px solid #b74b4b;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Section */
+section {
+  min-height: 100vh;
+  padding: 7rem 9% 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Section Heading */
+section h1 {
+  font-size: 4.5rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Education Cards */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.education-card {
+  background: #161616;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 2px solid #b74b4b;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.education-card i {
+  font-size: 4rem;
+  color: #b74b4b;
+  margin-bottom: 1rem;
+}
+
+.education-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.education-card p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.education-card:hover {
+  background: #b74b4b;
+  color: black;
+  transform: scale(1.05);
+}
+
+.education-card:hover i,
+.education-card:hover h3,
+.education-card:hover p {
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 1rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 60%;
+    background: #161616;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    transition: 0.4s;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  section h1 {
+    font-size: 3.8rem;
+  }
+}
+
+
+   </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <a href="index.html" class="logo">ARYANRAJ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="experiance.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Education Section -->
+  <section>
+    <h1>My Education</h1>
+    <div class="education-container">
+      <div class="education-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Bachelor of Science in Information Technology (B.sc IT)</h3>
+        <p>Gossner College (Ranchi), Affilated from Ranchi University</p>
+        <p>Duration: 2022 - 2025</p>
+        <p>Specialization: Computer Science & Programming</p>
+      </div>
+    
+      <div class="education-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Online Courses</h3>
+        <p>Machine Learning, Artificial Intelligence, Web Development</p>
+        <p>Teachnook - 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>
