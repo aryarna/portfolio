@@ -1,6 +1,13 @@
+# Ignore virtual environment
+venv/
 
-firebase_service-account.json 
-ar.jpg
-demo.png
-portfolio/portfolio/static/ar.jpg
-portfolio/portfolio/static/demo.jpg
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore sensitive Firebase config
+firebase_service-account.json
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
