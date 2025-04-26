@@ -7,16 +7,20 @@ from firebase_admin import credentials, firestore
 # Initialize Flask app
 app = Flask(__name__)
 
-# Firebase initialization from environment variable
-firebase_creds = os.getenv('FIREBASE_CREDENTIALS')  # Get the JSON credentials from environment variable
-cred_dict = json.loads(firebase_creds)  # Convert the JSON string into a dictionary
-cred = credentials.Certificate(cred_dict)  # Create a credential object
+# Check: Local ya Render
+if os.getenv('FIREBASE_CONFIG'):
+    firebase_creds = os.getenv('FIREBASE_CONFIG')
+    cred_dict = json.loads(firebase_creds)
+    cred = credentials.Certificate(cred_dict)
+else:
+    cred = credentials.Certificate('firebase_service-account.json')  # Local file
+
 firebase_admin.initialize_app(cred)
 
 # Initialize Firestore
 db = firestore.client()
 
-# Routes (same as before)
+# Routes
 @app.route('/')
 def home():
     projects_ref = db.collection('projects')
