@@ -25,8 +25,6 @@
     body {
       background-color: black;
       color: white;
-      padding: 0;
-      margin: 0;
     }
 
     header {
@@ -47,7 +45,6 @@
       color: #b74b4b;
       font-weight: 800;
       cursor: pointer;
-      transition: 0.5s ease;
     }
 
     nav {
@@ -62,7 +59,8 @@
       transition: 0.3s ease;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover,
+    nav a.active {
       color: #b74b4b;
       border-bottom: 2px solid #b74b4b;
     }
@@ -108,7 +106,8 @@
       display: block;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 1.2rem;
       background: #1e1e1e;
@@ -117,17 +116,11 @@
       border-radius: 0.5rem;
       font-size: 1.6rem;
       margin-bottom: 1.5rem;
-      outline: none;
-    }
-
-    .contact-form input:focus, .contact-form textarea:focus {
-      border: 1px solid #b74b4b;
     }
 
     .contact-form button {
       padding: 1rem 3rem;
       background: #b74b4b;
-      border: none;
       color: #fff;
       font-size: 1.8rem;
       cursor: pointer;
@@ -154,60 +147,36 @@
       font-size: 1.8rem;
       color: #b74b4b;
       text-decoration: none;
-      transition: 0.3s ease;
     }
 
     .contact-info a:hover {
       color: #d85b5b;
     }
 
+    /* ------------------------------
+       ✅ Responsive Navigation CSS 
+       ------------------------------ */
     @media (max-width: 768px) {
-      .contact-form {
-        padding: 1.5rem;
-      }
-
-      .contact-form h2 {
-        font-size: 2rem;
-      }
-
-      .contact-form label {
-        font-size: 1.4rem;
-      }
-
-      .contact-form input, .contact-form textarea {
-        font-size: 1.4rem;
-      }
-
-      .contact-form button {
-        font-size: 1.6rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 1rem 5%;
+      .menu-icon {
+        display: block;
       }
 
       nav {
-        display: block;
-        text-align: center;
-        gap: 1rem;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: #161616;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem;
+        align-items: flex-start;
+        transition: 0.3s ease;
       }
 
-      .contact-form h2 {
-        font-size: 1.8rem;
-      }
-
-      .contact-form label {
-        font-size: 1.3rem;
-      }
-
-      .contact-form input, .contact-form textarea {
-        font-size: 1.3rem;
-      }
-
-      .contact-form button {
-        font-size: 1.5rem;
+      nav.active {
+        right: 0;
       }
     }
   </style>
@@ -215,7 +184,7 @@
 <body>
 
   <header>
-    <a href="home.html" class="logo">ARYANRAJ</a>
+    <a href="#" class="logo">ARYANRAJ</a>
     <nav>
       <a href="home.html">Home</a>
       <a href="services.html">Services</a>
@@ -223,7 +192,6 @@
       <a href="education.html">Education</a>
       <a href="experiance.html">Experience</a>
       <a href="contact.html" class="active">Contact</a>
-      
     </nav>
     <div class="menu-icon" onclick="toggleMenu()">
       <i class="fas fa-bars"></i>

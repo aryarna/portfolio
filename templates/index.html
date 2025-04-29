@@ -382,7 +382,7 @@ nav a:hover, nav a.active {
 </head>
 <body>
   <header>
-    <a href="#" class="logo">ARYANRAJ</a>
+    <a href="{{ url_for('home') }}" class="logo">ARYANRAJ</a>
     <nav>
         <a href="{{ url_for('home') }}" class="active">Home</a>
         <a href="{{ url_for('services') }}">Services</a>
@@ -416,7 +416,7 @@ nav a:hover, nav a.active {
         <a href="#"><i class="fab fa-x-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
-      <a href="#" class="btn">Hire Me</a>
+      <a href="{{ url_for('contact') }}" class="btn">Hire Me</a>
     </div>
   </section>
 
